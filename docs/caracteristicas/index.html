@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Características - MME UD3: El procesador</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">MME UD3: El procesador</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../arquitectura/" class="nav-link">Arquitecturas</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Características</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../familias/" class="nav-link">Familias</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tecnologías <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../tecnologias/tecnologiascomunes/" class="dropdown-item">Comunes</a>
+</li>
+                                    
+<li>
+    <a href="../tecnologias/tecnologiasintel/" class="dropdown-item">Intel</a>
+</li>
+                                    
+<li>
+    <a href="../tecnologias/tecnologiasamd/" class="dropdown-item">AMD</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Procesadores <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../procesadores/procesadoresintel/" class="dropdown-item">Intel</a>
+</li>
+                                    
+<li>
+    <a href="../procesadores/procesadoresamd/" class="dropdown-item">AMD</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../arquitectura/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../familias/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#velocidad-del-procesador" class="nav-link">Velocidad del procesador</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#memoria-cache" class="nav-link">Memoria caché</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#alimentacion" class="nav-link">Alimentación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#repertorios-de-instrucciones" class="nav-link">Repertorios de instrucciones</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#tdp" class="nav-link">TDP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#tecnologia" class="nav-link">Tecnología</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ley-de-moore" class="nav-link">Ley de Moore</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#numero-de-nucleos" class="nav-link">Número de núcleos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="velocidad-del-procesador">Velocidad del procesador</h1>
+<ul>
+<li>
+<p>Se expresa en hercios (Hz).</p>
+<ul>
+<li>1 Hz = 1 ciclo de reloj por segundo</li>
+<li>1 MHz = 106  Hz (1 millón de hercios)</li>
+<li>1 GHz = 109  Hz (1.000 millones de hercios)</li>
+</ul>
+</li>
+<li>
+<p>Velocidad. Se definen dos velocidades:</p>
+<ul>
+<li>Velocidad interna</li>
+<li>Velocidad externa, bus del sistema o FSB (modelo clásico)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Velocidad interna = Velocidad externa x Multiplicador</strong> </p>
+<h1 id="memoria-cache">Memoria caché</h1>
+<ul>
+<li>Memoria intermedia entre la memoria principal y el procesador.</li>
+<li>Memoria más rápida que la memoria principal, pero de menor tamaño.</li>
+<li>Almacena copia de los datos más utilizados.</li>
+<li>Permite reducir el tiempo medio de acceso a los datos.</li>
+<li>Puede separarse en caché de datos o instrucciones.</li>
+<li>En procesadores de varios núcleos puede ser exclusiva de cada núcleo o compartida.</li>
+</ul>
+<p><img alt="h:150px" src="../imagenes/niveles_memoria.png" /></p>
+<h1 id="alimentacion">Alimentación</h1>
+<ul>
+<li>El micro recibe alimentación de la placa base.</li>
+<li>Dos tipos de voltaje:<ul>
+<li>Externo o de E/S </li>
+<li>Interno o de núcleo</li>
+</ul>
+</li>
+<li>En las placas antiguas se podía configurar el voltaje suministrado al procesador.</li>
+<li>Los procesadores actuales permiten que la placa determine el voltaje adecuado.</li>
+</ul>
+<p><img alt="h:200px" src="../imagenes/atx24.png" /></p>
+<h1 id="repertorios-de-instrucciones">Repertorios de instrucciones</h1>
+<p>Conjunto de instrucciones para aplicaciones multimedia y 3D.</p>
+<ul>
+<li>MMX (Pentium) y 3DNow! (AMD K6)<ul>
+<li>En una única instrucción operaciones con varios datos.</li>
+<li>Permite hasta 4 operaciones en coma flotante por ciclo de reloj.</li>
+</ul>
+</li>
+<li>SSE o MMX-2(Pentium III)<ul>
+<li>70 instrucciones más (acceso a memoria, mpeg-2, reconocimiento de voz, etc.)</li>
+<li>Uso de forma simultánea con la FPU.</li>
+</ul>
+</li>
+<li>SSE2 (Pentium IV)<ul>
+<li>144 instrucciones para cálculos de doble precisión (128 bits)</li>
+</ul>
+</li>
+<li>SSE3 (Prescott)<ul>
+<li>Instrucciones para el manejo de hilos (threads).</li>
+</ul>
+</li>
+<li>SSE3 (Intel Core 2 Duo y Xeon)<ul>
+<li>32 instrucciones para mejorar la velocidad de ejecución.</li>
+</ul>
+</li>
+<li>SSE4 (Intel Core2 e Intel Core 1st gen)<ul>
+<li>47 instrucciones instrucciones en Intel Core2 (SSE4.1)</li>
+<li>7 instrucciones adicionales en Intel Core 1st gen (SSE 4.2)</li>
+</ul>
+</li>
+<li>AVX (Intel Core 2nd gen) y AVX2 (Intel Core 4th gen)<ul>
+<li>Instrucciones de 256 bits para uso intensivo de punto flotante</li>
+</ul>
+</li>
+<li>AVX-512 (Intel Core 7th gen)<ul>
+<li>Procesa el doble de elementos que AVX y AVX2 en una sola instrucción</li>
+</ul>
+</li>
+</ul>
+<h1 id="tdp">TDP</h1>
+<ul>
+<li>Son las iniciales de Thermal Design Power</li>
+<li>Aunque se mide en vatios (W) no hace referencia al consumo del procesador, sino al calor que desprende</li>
+<li>Indica la cantidad máxima de calor que se espera que un componente produzca en un escenario de uso intenso</li>
+<li>Aunque el TDP no mide el consumo eléctrico del procesador, sí está relacionado directamente con este</li>
+<li>El TDP puede ser una medida que ayude a elegir la refrigeración adecuada para un procesador</li>
+<li>Algunos procesadores pueden, en situaciones de buena refrigeración, exceder su TDP nominal e incrementar su rendimiento</li>
+</ul>
+<h1 id="tecnologia">Tecnología</h1>
+<ul>
+<li>El elemento básico que componen un microprocesador es el transistor.</li>
+<li>En un microprocesador actual hay millones de transistores.</li>
+<li>El tamaño de los transistores se ha ido reduciendo.</li>
+<li>En la actualidad del orden de nanómetros (nm)</li>
+<li>1 nm = 10^-9</li>
+<li>En poco tiempo cambiaremos a la siguiente unidad de medida, el Ángstrom (Å)</li>
+<li>1 Å = 10-10 m = 0,1 nm</li>
+</ul>
+<h1 id="ley-de-moore">Ley de Moore</h1>
+<ul>
+<li>Promulgada en 1965 por Gordon Moore (cofundador de Intel)</li>
+<li>Redefinida por él mismo en 1975</li>
+<li>Esta ley empírica establece que <strong>el número de transistores</strong> por unidad de superficie en los procesadores <strong>se duplica aproximadamente cada dos años</strong>.</li>
+<li>La consecuencia directa de la ley de Moore es que los precios de los - procesadores bajan al mismo tiempo que las prestaciones suben</li>
+<li>No se trata de una ley en el sentido científico de la palabra, sino de una observación empírica que se viene cumpliendo desde la década de los años </li>
+</ul>
+<p><img alt="h:450px" src="../imagenes/ley_de_moore.png" /></p>
+<h1 id="numero-de-nucleos">Número de núcleos</h1>
+<p>Número de núcleos integrados en un solo chip y funcionando en paralelo.</p>
+<p><img alt="h:300px" src="../imagenes/numero_nucleos.png" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

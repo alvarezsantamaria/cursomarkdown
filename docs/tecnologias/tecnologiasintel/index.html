@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Intel - MME UD3: El procesador</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">MME UD3: El procesador</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../arquitectura/" class="nav-link">Arquitecturas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../caracteristicas/" class="nav-link">Características</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../familias/" class="nav-link">Familias</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tecnologías <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../tecnologiascomunes/" class="dropdown-item">Comunes</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Intel</a>
+</li>
+                                    
+<li>
+    <a href="../tecnologiasamd/" class="dropdown-item">AMD</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Procesadores <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../procesadores/procesadoresintel/" class="dropdown-item">Intel</a>
+</li>
+                                    
+<li>
+    <a href="../../procesadores/procesadoresamd/" class="dropdown-item">AMD</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../tecnologiascomunes/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../tecnologiasamd/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#hyperthreading" class="nav-link">Hyperthreading</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#turboboost" class="nav-link">TurboBoost</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#thermal-velocity-boost" class="nav-link">Thermal Velocity Boost</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#memoria-intel-optane" class="nav-link">Memoria Intel Optane</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#tecnologia-de-virtualizacion-vt-x" class="nav-link">Tecnología de virtualización VT-X</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#nucleos-e-y-nucleos-p" class="nav-link">Núcleos E y núcleos P</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#estados-de-inactividad" class="nav-link">Estados de inactividad</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="hyperthreading">Hyperthreading</h1>
+<ul>
+<li>Permite que un procesador maneje dos conjuntos de instrucciones independientes (es decir, dos procesos independientes) al mismo tiempo.</li>
+<li>La CPU consta de dos conjuntos de registros de propósito general y propósito específico, pero sólo tiene una ALU, una unidad de control, una memoria caché, etc.</li>
+<li>Nunca se obtiene el mismo rendimiento que un equipo con dos procesadores. La mejora de rendimiento es de hasta un 30%.</li>
+</ul>
+<h1 id="turboboost">TurboBoost</h1>
+<ul>
+<li>Se trata de analizar en tiempo real el porcentaje de ocupación de cada núcleo del microprocesador.</li>
+<li>En el caso de que la ocupación sea alta, aumenta automáticamente la frecuencia de reloj del núcleo.</li>
+<li>El aumento de frecuencia es independiente entre núcleos.</li>
+<li>Eleva mucho la temperatura y el consumo, por lo que cuando baja la carga o sube la temperatura de un núcleo, el sistema vuelve a bajar la frecuencia.</li>
+<li>Existen varias versiones:</li>
+</ul>
+<p><img alt="h:120px" src="../../imagenes/turboboost.png" /></p>
+<h1 id="thermal-velocity-boost">Thermal Velocity Boost</h1>
+<ul>
+<li>Tecnología complementaria a TurboBoost.</li>
+<li>Permite elevar la frecuencia de cada núcleo del procesador hasta 200MHz, en caso de altas necesidades de rendimiento y siempre que la temperatura de dicho núcleo sea inferior a 50 grados centígrados.</li>
+</ul>
+<p><img alt="h:200px" src="../../imagenes/thermal_velocity_boost.jpg" /></p>
+<h1 id="memoria-intel-optane">Memoria Intel Optane</h1>
+<ul>
+<li>La memoria Intel® Optane™ es un tipo de memoria no volátil similar a un disco duro que se usa con el fin de acelerar el rendimiento del sistema.</li>
+<li>Se almacenan en ella programas y datos a modo de memoria caché para mejorar los tiempos de carga en RAM.</li>
+<li>Está situada entre al RAM y el almacenamiento de datos.</li>
+<li>Se conecta a puertos M.2 (PCI Express x4)</li>
+</ul>
+<p><img alt="h:200px" src="../../imagenes/optane.jpg" /></p>
+<h1 id="tecnologia-de-virtualizacion-vt-x">Tecnología de virtualización VT-X</h1>
+<ul>
+<li>Permite mejorar el rendimiento de sistemas operativos ejecutados en un  software de virtualización (VMWare, VirtualBox…)</li>
+<li>Las máquinas virtuales comparten recursos, por lo que, acceden directamente al hardware físico sin que tenga que intervenir el sistema operativo.</li>
+<li>Es indispensable para virtualizar sistemas de 64 bits.</li>
+<li>Debe habilitarse desde la BIOS del sistema.</li>
+</ul>
+<p><img alt="h:150px" src="../../imagenes/vtx_uefi.jpg" /> <img alt="h:150px" src="../../imagenes/vtx_bios.jpg" /></p>
+<h1 id="nucleos-e-y-nucleos-p">Núcleos E y núcleos P</h1>
+<ul>
+<li>Disponible desde Intel Core 12gen (Alder Lake)</li>
+<li>Arquitectura híbrida: usa dos tipos de núcleos</li>
+<li>Núcleos P (Performance)<ul>
+<li>Más grandes en tamaño y también en potencia</li>
+<li>Orientados al máximo rendimiento (y mayor consumo)</li>
+<li>Son los únicos con Hyperthreading</li>
+</ul>
+</li>
+<li>Núcleos E (Efficiency)<ul>
+<li>Menor tamaño y potencia</li>
+<li>Orientados al bajo consumo (eficiencia energética)</li>
+</ul>
+</li>
+<li>Se expresa el número de núcleos de los procesadores como una combinación de ambos.</li>
+<li>Ejemplo Intel 12900K: 8P+8E <ul>
+<li>8 P-Cores y 8 E-Cores. Nº hilos (threads): 2x8P + 1x8E = 24 hilos</li>
+</ul>
+</li>
+</ul>
+<h1 id="estados-de-inactividad">Estados de inactividad</h1>
+<ul>
+<li>Permite el ahorro de energía mediante el “apagado” de diferentes módulos del procesador en caso de que el sistema no esté siendo utilizado.</li>
+<li>C0- Activo<ul>
+<li>La CPU está funcionando normalmente.</li>
+</ul>
+</li>
+<li>C1- Pausa automática: <ul>
+<li>El reloj del sistema está activado, pero no genera pulsos. </li>
+<li>El procesador no ejecuta las instrucciones código máquina, pero   puede volver a un estado de ejecución de forma casi instantánea.</li>
+</ul>
+</li>
+<li>C2- Reloj de detención: <ul>
+<li>El reloj del la CPU está desactivado. </li>
+<li>El procesador necesita más tiempo para arrancar.</li>
+</ul>
+</li>
+<li>C3- Reposo: <ul>
+<li>El reloj del sistema está desactivado. </li>
+<li>El procesador está en estado de reposo.</li>
+</ul>
+</li>
+<li>C4- Deeper sleep: <ul>
+<li>Gran reducción de consumo eléctrico. </li>
+<li>Se diferencia del estado anterior en el tiempo en el que la CPU volverá a arrancar.</li>
+</ul>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

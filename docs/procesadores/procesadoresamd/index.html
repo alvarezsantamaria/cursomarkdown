@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>AMD - MME UD3: El procesador</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">MME UD3: El procesador</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../arquitectura/" class="nav-link">Arquitecturas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../caracteristicas/" class="nav-link">Características</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../familias/" class="nav-link">Familias</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tecnologías <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../tecnologias/tecnologiascomunes/" class="dropdown-item">Comunes</a>
+</li>
+                                    
+<li>
+    <a href="../../tecnologias/tecnologiasintel/" class="dropdown-item">Intel</a>
+</li>
+                                    
+<li>
+    <a href="../../tecnologias/tecnologiasamd/" class="dropdown-item">AMD</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Procesadores <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../procesadoresintel/" class="dropdown-item">Intel</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">AMD</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../procesadoresintel/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#athlon" class="nav-link">Athlon</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#apus" class="nav-link">APUs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#fx-4300" class="nav-link">FX 4300</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#fx-6300" class="nav-link">FX 6300</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#fx-8300" class="nav-link">FX 8300</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#familia-ryzen" class="nav-link">Familia Ryzen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ryzen-3" class="nav-link">Ryzen 3</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ryzen-5" class="nav-link">Ryzen 5</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ryzen-7" class="nav-link">Ryzen 7</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ryzen-9" class="nav-link">Ryzen 9</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ryzen-threadripper" class="nav-link">Ryzen Threadripper</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#significado-del-marcado-de-amd" class="nav-link">Significado del marcado de AMD</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="athlon">Athlon</h1>
+<p>Versiones de dos y cuatro núcleos físicos. </p>
+<p>Ofrecen un buen rendimiento general, sin llegar a los niveles de los procesadores actuales.</p>
+<p><img alt="h:250px" src="../../imagenes/amd_athlon.jpg" />      </p>
+<h1 id="apus">APUs</h1>
+<p>Procesadores de dos y cuatro núcleos con GPU integrada en el procesador, en algunos casos de alto rendimiento. </p>
+<p>Algunos ejemplos son: A1, A6, A10, etc.</p>
+<p><img alt="h:250px" src="../../imagenes/amd_apus.jpg" /></p>
+<h1 id="fx-4300">FX 4300</h1>
+<p>Cuatro núcleos y frecuencias de trabajo muy altas.</p>
+<p>Buen rendimiento general.</p>
+<p><img alt="h:250px" src="../../imagenes/amd_fx4300.jpg" /></p>
+<h1 id="fx-6300">FX 6300</h1>
+<p>Seis núcleos y frecuencias de trabajo muy altas.</p>
+<p>Un peldaño por encima de los FX 4300</p>
+<p><img alt="h:300px" src="../../imagenes/amd_fx6300.jpg" /></p>
+<h1 id="fx-8300">FX 8300</h1>
+<p>Ocho núcleos y frecuencias de trabajo &gt;4 GHz.</p>
+<p>Altísimo TDP (generan mucha temperatura)</p>
+<p><img alt="h:250px" src="../../imagenes/amd_fx8300.jpg" /></p>
+<h1 id="familia-ryzen">Familia Ryzen</h1>
+<p>Actual familia de procesadores de AMD</p>
+<p>Arquitectura con litografías de hasta 5 nm</p>
+<p>Versiones de hasta 16 núcleos y 32 hilos</p>
+<p>Se dividen en varias subfamilias:</p>
+<h1 id="ryzen-3">Ryzen 3</h1>
+<p>Cuatro núcleos, ocho hilos</p>
+<p>Es el procesador más básico de esta familia</p>
+<p><img alt="h:300px" src="../../imagenes/amd_ryzen3.jpg" /></p>
+<h1 id="ryzen-5">Ryzen 5</h1>
+<p>Entre cuatro y seis núcleos, de ocho a doce hilos</p>
+<p>Equivalente (aprox.) a un Core i5</p>
+<p><img alt="h:300px" src="../../imagenes/amd_ryzen5.jpg" /></p>
+<h1 id="ryzen-7">Ryzen 7</h1>
+<p>Ocho núcleos, dieciséis hilos</p>
+<p>Muy alto rendimiento y precio elevado</p>
+<p><img alt="h:300px" src="../../imagenes/amd_ryzen7.jpg" /></p>
+<h1 id="ryzen-9">Ryzen 9</h1>
+<p>Procesador de gama alta y precios muy elevados</p>
+<p>16 núcleos, 32 hilos</p>
+<p><img alt="h:300px" src="../../imagenes/amd_ryzen9.jpg" /></p>
+<h1 id="ryzen-threadripper">Ryzen Threadripper</h1>
+<p>Versiones de hasta 96 núcleos y 192 hilos</p>
+<p>Diseñado para servidores</p>
+<p><img alt="h:300px" src="../../imagenes/amd_threadripper2.jpg" /></p>
+<h1 id="significado-del-marcado-de-amd">Significado del marcado de AMD</h1>
+<p>Al igual que Intel, AMD marca sus procesadores de forma que se indica la generación, modelo y otros datos de interés:</p>
+<p><img alt="h:300px" src="../../imagenes/significado_marcaje_amd1.jpg" /></p>
+<p><img alt="h:450px" src="../../imagenes/significado_marcaje_amd2.jpg" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,24 @@
+site_name: 'MME UD3: El procesador'
+docs_dir: md
+site_dir: docs
+#plugins:
+#  - pdf-export  # Plugin para exportar a PDF
+# Dejo desactivado este plugin porque no funciona con el tema elegido
+theme: bootstrap  # Tema Bootstrap
+nav:
+  - Inicio: index.md  # Introducción al tema
+  - Arquitecturas: arquitectura.md  # Arquitecturas CISC/RISC
+  - Características: caracteristicas.md  # Características
+  - Familias: familias.md  # Familias de procesadores
+  - Tecnologías: 
+    - Comunes: tecnologias/tecnologiascomunes.md
+    - Intel: tecnologias/tecnologiasintel.md
+    - AMD: tecnologias/tecnologiasamd.md
+  - Procesadores: 
+    - Intel: procesadores/procesadoresintel.md  
+    - AMD: procesadores/procesadoresamd.md       
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences

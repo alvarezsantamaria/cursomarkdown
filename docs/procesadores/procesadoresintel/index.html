@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Intel - MME UD3: El procesador</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">MME UD3: El procesador</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../arquitectura/" class="nav-link">Arquitecturas</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../caracteristicas/" class="nav-link">Características</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../familias/" class="nav-link">Familias</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tecnologías <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../tecnologias/tecnologiascomunes/" class="dropdown-item">Comunes</a>
+</li>
+                                    
+<li>
+    <a href="../../tecnologias/tecnologiasintel/" class="dropdown-item">Intel</a>
+</li>
+                                    
+<li>
+    <a href="../../tecnologias/tecnologiasamd/" class="dropdown-item">AMD</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Procesadores <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Intel</a>
+</li>
+                                    
+<li>
+    <a href="../procesadoresamd/" class="dropdown-item">AMD</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../tecnologias/tecnologiasamd/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../procesadoresamd/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#celeron" class="nav-link">Celeron</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#atom" class="nav-link">Atom</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#pentium-core2duo" class="nav-link">Pentium Core2Duo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#pentium-core2quad" class="nav-link">Pentium Core2Quad</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#familia-intel-core" class="nav-link">Familia Intel Core</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#intel-core-i3" class="nav-link">Intel Core i3</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#intel-core-i5" class="nav-link">Intel Core i5</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#intel-core-i7" class="nav-link">Intel Core i7</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#intel-core-i9" class="nav-link">Intel Core i9</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#serie-x" class="nav-link">Serie X</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#intel-xeon" class="nav-link">Intel XEON</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#significado-del-marcado-intel" class="nav-link">Significado del marcado Intel</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="celeron">Celeron</h1>
+<p>Son procesadores económicos con dos núcleos físicos que ofrecen un buen rendimiento en ofimática general, multimedia y navegación.</p>
+<p><img alt="h:300px" src="../../imagenes/intel_celeron.jpg" /></p>
+<h1 id="atom">Atom</h1>
+<p>Procesadores de bajo consumo, utilizados en dispositivos móviles, tablets y ordenadores notebooks.</p>
+<p><img alt="h:300px" src="../../imagenes/intel_atom.jpg" /></p>
+<h1 id="pentium-core2duo">Pentium Core2Duo</h1>
+<p>Mejoran el rendimiento frente a los anteriores ofreciendo mayores frecuencias de reloj. Mantienen dos núcleos. </p>
+<p><img alt="h:300px" src="../../imagenes/intel_core2duo.jpg" />      </p>
+<h1 id="pentium-core2quad">Pentium Core2Quad</h1>
+<p>Mayores frecuencias de reloj que los Core 2 Duo</p>
+<p>Integran cuatro núcleos. </p>
+<p><img alt="h:300px" src="../../imagenes/intel_core2duo.jpg" />      </p>
+<h1 id="familia-intel-core">Familia Intel Core</h1>
+<p>Son los que tenemos actualmente en el mercado</p>
+<p>Han desbancado a las familias anteriores</p>
+<p>Se dividen en varias subfamilias:</p>
+<h1 id="intel-core-i3">Intel Core i3</h1>
+<p>Hasta 8 núcleos y 12 hilos (13 gen)</p>
+<p>Adecuado para equipos económicos con rendimiento de ofimática</p>
+<p><img alt="h:300px" src="../../imagenes/intel_core_i3.jpg" />      </p>
+<h1 id="intel-core-i5">Intel Core i5</h1>
+<p>Hasta 14 núcleos y 20 hilos (14 gen)</p>
+<p>Hay versiones reducidas (“U”) con menos núcleos</p>
+<p>Buena relación precio-rendimiento para presupuestos medios</p>
+<p><img alt="h:300px" src="../../imagenes/intel_core_i5.jpg" />      </p>
+<h1 id="intel-core-i7">Intel Core i7</h1>
+<p>Hasta 20 núcleos y 28 hilos (14 gen)</p>
+<p>Hay versiones reducidas (“U”) con menos núcleos</p>
+<p>Mejoran el rendimiento de los i5. Uso profesional</p>
+<p><img alt="h:300px" src="../../imagenes/intel_core_i7.jpg" />      </p>
+<h1 id="intel-core-i9">Intel Core i9</h1>
+<p>Hasta 24 núcleos y 32 hilos (14gen)</p>
+<p>Sólo los aprovecharemos realmente si vamos a utilizar aplicaciones profesionales que dependan de una alta capacidad multihilo</p>
+<p><img alt="h:300px" src="../../imagenes/intel_core_i9.jpg" />      </p>
+<h1 id="serie-x">Serie X</h1>
+<p>Son los más potentes de la familia Intel Core</p>
+<p>Utilizados para equipos que necesiten altas capacidades de rendimiento, como servidores en empresas de tamaño medio</p>
+<p>Usan como base el diseño del Intel Core i9</p>
+<p><img alt="h:250px" src="../../imagenes/intel_core_i9x.jpg" />      </p>
+<h1 id="intel-xeon">Intel XEON</h1>
+<p>Son los procesadores más avanzados diseñados por Intel</p>
+<p>Hasta 56 núcleos y 112 hilos</p>
+<p>Se usan para servidores de grandes empresas</p>
+<p>Su precio es muy elevado</p>
+<p>Existen versiones bronze, silver, gold y platinum y Max (usa memoria HBM)</p>
+<p><img alt="h:400px" src="../../imagenes/familia_intel_xeon.jpg" />      </p>
+<h1 id="significado-del-marcado-intel">Significado del marcado Intel</h1>
+<p><img alt="h:400px" src="../../imagenes/significado_marcaje_intel.png" />      </p>
+<p><img alt="h:400px" src="../../imagenes/significado_marcaje_intel2.jpg" />      </p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
